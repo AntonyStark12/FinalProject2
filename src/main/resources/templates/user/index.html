@@ -3,32 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Главная страница</title>
+    <link th:href="@{/css/product.css}" type="text/css" rel="stylesheet">
 </head>
 <body>
 <form method="post" th:action="@{/logout}">
-    <button type="submit">Выйти из личного кабинета</button>
+    <button type="submit" class="form-submit-button">Выйти из личного кабинета</button>
 </form>
 <br>
 <form method="get" th:action="@{/cart}">
-    <button type="submit">Корзина</button>
+    <button type="submit" class="form-submit-button">Корзина</button>
 </form>
 <br>
 <form method="get" th:action="@{/orders}">
-    <input type="submit" value="Заказы">
+    <input type="submit" class="form-submit-button" value="Заказы">
 </form>
-<h1>Личный кабинет</h1>
-<h3>Cортировка, поиск, фильтрация</h3>
+<h1 style="color: #016ABC">Личный кабинет</h1>
+<h2 style="color: #016ABC; font-style: italic">Cортировка, поиск, фильтрация</h2>
 <form th:method="POST" th:action="@{/person account/product/search}">
     <fieldset>
         <legend>Выберите параметры для сортировки, поиска, фильтрации:</legend>
         <label for="search">Поиск по наименованию</label>
-        <input type="text" id="search" name="search" th:value="*{value_search}">
+        <input class="type-1" style="width: 500px" type="text" id="search" name="search" th:value="*{value_search}">
         <br>
         <p>Цена, P</p>
         <label for="ot">От</label>
-        <input type="text" name="ot" id="ot" th:value="*{value_price_ot}">
+        <input class="type-1" type="text" name="ot" id="ot" th:value="*{value_price_ot}">
         <label for="do">До</label>
-        <input type="text" name="do" id="do" th:value="*{value_price_do}">
+        <input class="type-1" type="text" name="do" id="do" th:value="*{value_price_do}">
         <br>
         <br>
         <div>
@@ -46,12 +47,12 @@
             <label for="clothes">Одежда</label>
             <br>
             <br>
-            <input type="submit" value="Найти">
+            <input type="submit" class="form-submit-button" value="Найти">
         </div>
     </fieldset>
 </form>
 <hr>
-<h3>Результат поиска, cортировки, фильтрации</h3>
+<h2 style="color: #016ABC; font-style: italic">Результат поиска, cортировки, фильтрации</h2>
 <div th:each="product : ${search_product}">
     <img th:src="'/img/' + ${product.imageList[0].getFileName()}" width="300px">
     <br>
@@ -60,13 +61,13 @@
     <hr>
 </div>
 <hr>
-<h3>Доступные товары: </h3>
+<h2 style="color: #016ABC">Все доступные товары: </h2>
 <div th:each="product : ${products}">
     <img th:src="'/img/' + ${product.imageList[0].getFileName()}" width="300px">
     <br>
-    <a th:href="@{/product/info/{id}(id=${product.getId()})}" th:text="${product.getTitle()}"></a>
+    <a style="color: #016ABC; font-weight: bolder" th:href="@{/product/info/{id}(id=${product.getId()})}" th:text="${product.getTitle()}"></a>
     <p th:text="'Цена: ' + ${product.getPrice()}"></p>
-    <a th:href="@{/cart/add/{id}(id=${product.getId()})}">Добавить товар в корзину</a>
+    <a style="color: #016ABC; font-weight: bolder" th:href="@{/cart/add/{id}(id=${product.getId()})}">Добавить товар в корзину</a>
     <hr>
 </div>
 </body>

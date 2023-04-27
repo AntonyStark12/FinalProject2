@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Регистрация</title>
+    <link th:href="@{/css/autent.css}" type="text/css" rel="stylesheet">
 </head>
 <body>
-<h3>Регистрация</h3>
+<div class="Rectangle">
+<h3 style="color: #016ABC; font-size: 32px">Регистрация</h3>
 <form method="post" th:action="@{/registration}" th:object="${person}">
     <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
-    <label for="login">Введите логин: </label>
-    <input type="text" th:field="*{login}" id="login">
+    <label for="login"><span>Введите логин:</span></label>
+    <input class="type-1" type="text" placeholder="Логин" th:field="*{login}" id="login">
     <div style="color: red" th:if="${#fields.hasErrors('login')}" th:errors="*{login}"></div>
     <br>
-    <label for="password">Введите пароль: </label>
-    <input type="password" th:field="*{password}" id="password">
+    <label for="password"><span>Введите пароль:</span></label>
+    <input class="type-1" type="password" placeholder="Пароль" th:field="*{password}" id="password">
     <div style="color: red" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
     <br>
-    <input type="submit" value="Зарегистрироваться">
+    <input type="submit" class="form-submit-button" value="Зарегистрироваться">
 </form>
-<a href="/authentication">Вход</a>
+    <br>
+<a style="color: #016ABC; font-size: 18px" href="/authentication">Я уже зарегистрирован</a>
+</div>
 </body>
 </html>

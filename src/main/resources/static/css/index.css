@@ -1,4 +1,218 @@
-a {
+a{
     text-decoration: none;
-    color: brown;
+    color: darkgreen;
+}
+
+body{
+    background-color: #DFF2FF;
+}
+
+.Rectangle {
+    padding: 20px;
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    margin-left: 25%;
+    margin-top: 10%;
+    background: #8EC7F1;
+    text-align: center;
+    border-radius: 50px;
+    font-family: "Roboto Light";
+    font-size: large;
+    -webkit-box-shadow: 5px 5px 22px -5px rgba(33, 147, 234, 0.64);
+    -moz-box-shadow: 5px 5px 22px -5px rgba(33, 147, 234, 0.64);
+    box-shadow: 5px 5px 22px -5px rgba(33, 147, 234, 0.64);
+}
+
+.Rectangle:hover{
+
+    -webkit-box-shadow: 5px 5px 22px -5px rgba(4, 19, 199, 0.64);
+    -moz-box-shadow: 5px 5px 22px -5px rgba(4, 19, 199, 0.64);
+    box-shadow: 5px 5px 22px -5px rgba(4, 19, 199, 0.64);
+}
+
+
+input {
+    display:block;
+    width:70%;
+    margin-top:5px;
+    padding:10px;
+    margin-left: 0;
+    margin-right: auto;
+    font-size: 18px;
+    font-family: "Arial Narrow";
+}
+.type-1 {
+    border-radius:10px;
+    border: 1px solid #eee;
+    transition: .3s border-color;
+    font-size: 18px;
+    font-family: "Arial Narrow";
+}
+.type-1:hover {
+    border: 1px solid #111da9;
+}
+
+label{
+    font-size: 20px;
+}
+
+.form-submit-button {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    background: #B9DFFF;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    width:30%;
+    height: 50px;
+    font-size: 18px;
+}
+
+.form-submit-button:hover {
+    background: #016ABC;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+}
+
+span{
+    color: dimgrey;
+
+}
+
+textarea{
+    width:70%;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:5px;
+    padding:10px;
+    font-size: 18px;
+    font-family: "Arial Narrow";
+    border-radius:10px;
+    border: 1px solid #eee;
+}
+
+.select{
+    position: relative;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    text-transform: capitalize;
+    color: #fff;
+    text-align: left;
+    padding: 0 15px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 5px;
+    font-family: "Arial Narrow";
+    background: #016ABC;
+}
+
+.select::after{
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 6px;
+    height: 6px;
+    border: none;
+}
+
+.select:hover{
+    background: #A3D7FE;
+    color: dimgrey;
+}
+
+.select.active{
+    background: #222222;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.options{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+}
+
+.custom-file-input {
+    color: dimgrey;
+}
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+.custom-file-input::before {
+    content: 'Выбрать фото товара';
+    color: white;
+    display: inline-block;
+    background: #B9DFFF;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "Arial Narrow";
+}
+.custom-file-input:hover::before {
+    border-color: black;
+}
+.custom-file-input:active {
+    outline: 0;
+}
+.custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+
+legend{
+    font-size: 20px;
+    color: black;
+}
+
+fieldset{
+    color: dimgray;
+    font-size: 18px;
+    padding: 10px;
+}
+
+img{
+    border-radius: 10px;
+}
+
+img:hover{
+
+    -webkit-box-shadow: 5px 5px 22px -5px rgba(4, 19, 199, 0.64);
+    -moz-box-shadow: 5px 5px 22px -5px rgba(4, 19, 199, 0.64);
+    box-shadow: 5px 5px 22px -5px rgba(4, 19, 199, 0.64);
+}
+
+
+.type-2{
+
+    /* The native appearance is hidden */
+    appearance: none;
+    -webkit-appearance: none;
+
+    /* For a circular appearance we need a border-radius. */
+    border-radius: 50%;
+
+    /* The background will be the radio dot's color. */
+    background: #FF572233;
+
+    /* The border will be the spacing between the dot and the outer circle */
+    border: 3px solid #FFF;
+
+    /* And by creating a box-shadow with no offset and no blur, we have an outer circle */
+    box-shadow: 0 0 0 1px #FF5722;
 }

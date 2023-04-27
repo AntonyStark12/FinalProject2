@@ -11,7 +11,7 @@ body{
     padding: 20px;
     position: absolute;
     width: 40%;
-    height: 40%;
+    height: 50%;
     margin-left: 25%;
     margin-top: 10%;
     background: #8EC7F1;
@@ -37,7 +37,7 @@ input {
     width:70%;
     margin-top:5px;
     padding:10px;
-    margin-left: 0;
+    margin-left: auto;
     margin-right: auto;
     font-size: 18px;
     font-family: "Arial Narrow";
@@ -173,46 +173,4 @@ textarea{
 }
 .custom-file-input:active::before {
     background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
-}
-
-legend{
-    font-size: 20px;
-    color: black;
-}
-
-fieldset{
-    color: dimgray;
-    font-size: 18px;
-    padding: 10px;
-}
-
-img{
-    border-radius: 10px;
-}
-
-img:hover{
-
-    -webkit-box-shadow: 5px 5px 22px -5px rgba(4, 19, 199, 0.64);
-    -moz-box-shadow: 5px 5px 22px -5px rgba(4, 19, 199, 0.64);
-    box-shadow: 5px 5px 22px -5px rgba(4, 19, 199, 0.64);
-}
-
-
-.type-2{
-
-    /* The native appearance is hidden */
-    appearance: none;
-    -webkit-appearance: none;
-
-    /* For a circular appearance we need a border-radius. */
-    border-radius: 50%;
-
-    /* The background will be the radio dot's color. */
-    background: #FF572233;
-
-    /* The border will be the spacing between the dot and the outer circle */
-    border: 3px solid #FFF;
-
-    /* And by creating a box-shadow with no offset and no blur, we have an outer circle */
-    box-shadow: 0 0 0 1px #FF5722;
 }

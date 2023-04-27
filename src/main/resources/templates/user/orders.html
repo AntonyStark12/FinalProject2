@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Заказы</title>
+    <link th:href="@{/css/product.css}" type="text/css" rel="stylesheet">
 </head>
 <body>
-<h3>Заказы</h3>
+<h3 style="color: #016ABC">Заказы</h3>
 <div th:each="order : ${orders}">
     <h3 th:text="'Заказ №' + ${order.getNumber()}"></h3>
     <img th:src="'/img/' + ${order.getProduct().getImageList()[0].getFileName()}" width="300px">
